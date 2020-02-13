@@ -11,18 +11,20 @@ import static org.junit.Assert.assertFalse;
 
 public class MowerTest {
     private Lawn  lawn;
-    private Location initPosition1;
+    private Location initPosition1 ;
     private Location initPosition2;
     private Location initPosition3;
+    private Location initPosition4;
     private Mower mower1;
     private Mower mower2;
     private Mower mower3;
     private Mower mower4;
-    private Location initPosition4;
+
 
     @Before
     public void init (){
-        lawn = new Lawn(new Location(5,5,"N"));
+        Location lawnSize = new Location(5,5);
+        lawn = new Lawn(lawnSize);
         initPosition1 = new Location(1, 2,"N");
         initPosition2 = new Location(1, 2,"E");
         initPosition3= new Location(1, 2,"S");
@@ -35,7 +37,8 @@ public class MowerTest {
 
     @Test
     public void shouldCheckIfLawnExist(){
-        assertFalse(lawn.equals(new Lawn(new Location(0,0," "))));
+        Location lawnEmpty = new Location(0,0);
+        assertFalse(lawn.equals(new Lawn(lawnEmpty)));
     }
 
     @Test

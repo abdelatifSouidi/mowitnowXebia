@@ -7,6 +7,11 @@ public class Location {
     private int y;
     public String orientation ;
 
+    public Location(int pX, int pY){
+        this.x = pX;
+        this.y = pY;
+    }
+
     public Location(int pX, int pY, String orientation){
         this.x = pX;
         this.y = pY;

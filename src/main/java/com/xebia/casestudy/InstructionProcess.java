@@ -7,7 +7,6 @@ public class InstructionProcess {
     private final String SOUTH = "S";
     private final String WEST = "W";
     private final String RIGHT = "D";
-    private final String LEFT = "G";
 
     public Location turn(Location location, String instruction) {
         switch (location.orientation){

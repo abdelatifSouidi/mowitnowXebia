@@ -11,7 +11,7 @@ public class Mower {
     public Location move(String instruction,Lawn  lawn) {
         char [] instructions = instruction.replaceAll("\\s+","").toCharArray();
         for (int i = 0; i < instructions.length ; i++) {
-            location= executeInstruction(instructions[i],lawn);
+            location = executeInstruction(instructions[i],lawn);
         }
         return location;
     }
